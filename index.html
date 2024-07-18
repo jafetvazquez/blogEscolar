@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog Escolar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- SweetAlert2 (Alertas) -->
+    <!--<script src="lib/SweetAlert2/sweetalert2.min.js"></script>
+    <link rel="lib/SweetAlert2/stylesheet" href="sweetalert2.min.css">-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!--<div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Camino Real de la Plata No. 305 | 
+                    Zona Plateada Pachuca de Soto, Hidalgo, México</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt text-light me-2"></i>+52 (771) 688 60 26</small>
+                    <small class="text-light"><i class="fab fa-whatsapp text-light me-2"></i>7721065676</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px">
+                    <a class="btn-dark btn-sm btn-sm-square rounded-circle me-2" href="https://twitter.com/Sedeco_Hgo" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn-dark btn-sm btn-sm-square rounded-circle me-2" href="https://www.facebook.com/SedecoHidalgo/" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn-dark btn-sm btn-sm-square rounded-circle me-2" href="mailto:webhgo@hidalgo.gob.mx" target="_blank"><i class="fa fa-envelope"></i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Carousel Start -->
+
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="#" class="navbar-brand p-0">
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#" class="nav-item nav-link active">Inicio</a>
+                    <a href="#" class="nav-item nav-link">Eventos y Capacitaciones</a>
+                    <a href="assets/header/BlogVisualizar.html" class="nav-item nav-link">Blog</a>
+                    <a href="#" class="nav-item nav-link">Plataformas</a>
+                    <a href="#" class="nav-item nav-link">Contáctanos</a>
+                </div>
+                <!-- <a href="#" class="btn btn-danger py-2 px-4 ms-3" onclick="inicioSesion()">Iniciar Sesión</a> -->
+            </div>
+        </nav>
+</div>
+
+
+    <!-- Topbar Start -->
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-150" src="img/foecdi.png" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">BLOG ESCOLAR</h1>
+                            <a href="#" class="btn btn-danger py-md-3 px-md-5 me-3 animated slideInLeft" onclick="inicioSesion()">Iniciar sesión</a>
+                            <a href="#" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight" onclick="registro()">Registrarse</a>
+                            <script>
+                            function registro() {
+                                Swal.fire({
+                                    title: '<strong>  <span style="font-size: 40px; margin: 5px 0;">Registrate como...</span> </strong>',
+                                    icon: false,
+                                    html:
+
+                                        '<input type="button" class="reg-bot" onclick=location.href="" value="Alumno">' +
+                                        '<input type="button" class="reg-bot" onclick=location.href="" value="Invitado">',
+
+                                    showCloseButton: false,
+                                    showCancelButton: false,
+
+                                    showConfirmButton: false
+                                });
+                            }
+
+                            function inicioSesion() {
+                                Swal.fire({
+                                    title: '<strong>  <span style="font-size: 40px; margin: 5px 0;">Inicia sesión como...</span> </strong>',
+                                    icon: false,
+                                    html:
+
+                                        '<input type="button" class="reg-bot" onclick=location.href="" value="Alumno">' +
+                                        '<input type="button" class="reg-bot" onclick=location.href="" value="Invitado">',
+
+                                    showCloseButton: false,
+                                    showCancelButton: false,
+
+                                    showConfirmButton: false
+                                });
+                            }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-green btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-danger p-3" placeholder="Type search keyword">
+                        <button class="btn btn-danger px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Sección -->
+    
+    <!-- Fin Sección -->
+
+
+    <!-- ¿Qué es? -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-danger text-uppercase">Blog Escolar</h5>
+                        <h1 class="mb-0">¿QUÉ ES?</h1>
+                    </div>
+                    <p class="mb-2">Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba... Esto solo es una prueba...</p>
+                    <div class="row g-0 mb-3">
+                        
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        
+                    </div>
+                                   </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-50 h-50 rounded wow zoomIn" data-wow-delay="0.9s" src="img/circulo.png" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin de ¿Qué es? -->
+
+
+    <!-- Sección -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-danger text-uppercase">Eventos y Capacitaciones</h5>
+                <h1 class="mb-0">Conoce noticias, eventos y capacitaciones</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="bg-danger rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-users-cog text-white"></i>
+                            </div>
+                            <h4>Eventos</h4>
+                            <p class="mb-0">Esto solo es una prueba...</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                    <div class="position-relative h-100">
+                        <img class="position-static w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/fomento economico digital-10.png" style="object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="bg-danger rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-cubes text-white"></i>
+                            </div>
+                            <h4>Capacitaciones</h4>
+                            <p class="mb-0">Esto solo es una prueba...</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin de Sección -->
+
+
+    
+
+
+    <!-- Otra Seccion -->
+    
+    <!-- Fin de otra sección -->
+ 
+    
+<!-- Footer Start -->
+
+ <div class="container-fluid bg-dark mt-5 wow fadeInUp" data-wow-delay="0.1s">
+<footer data-v-58f74857="" data-v-034d2457="" class="panel-footer bg-dark">
+        <div data-v-58f74857="" class="container">
+            <div data-v-58f74857="" class="row">
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-2">
+                    <br>
+                    
+                </div>
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-3">
+                    <br>
+                    
+                </div>
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-4">
+                    <br>
+                    <h5 class="text-light col-mb-2">Ubicación</h5>
+                    <i class="bi bi-geo-alt text-light me-2"></i>
+                    <br>
+                    <p class="mb-0 ">Hidalgo, México</p>
+                    <br>
+                </div>
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-3">
+                    <br>
+                    <h5 class="text-light col-mb-2">Contacto</h5>
+                    <i class="fa fa-phone-alt text-light me-2"> </i>
+                    <p class="mb-0">+52 </p>
+<br>
+                    <i class="fab fa-whatsapp text-light me-2"></i>
+                    <p class="mb-0"></p>
+                </div>
+            </div>
+        </div>
+        <center><br>
+            <p class="mb-0">&copy; <a class="text-white ">2022</a>
+        </center>
+        <br>
+</div>
+    </footer>
+
+    <!-- Footer End -->
+
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-danger btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

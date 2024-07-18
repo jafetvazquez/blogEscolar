@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<style>
+    /* Sección del Título Tramites */
+    .section-title2::before {
+        position: absolute;
+        content: "";
+        width: 700px;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        background: var(--primary);
+        border-radius: 2px;
+    }
+
+    .section-title2.text-center::before {
+        left: 50%;
+        margin-left: -350px;
+    }
+
+    .section-title2::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 5px;
+        bottom: 0px;
+        background: #FFFFFF;
+        -webkit-animation: section-title2-run 10s infinite linear;
+        animation: section-title2-run 10s infinite linear;
+    }
+
+    .section-title2.text-center::after {
+        -webkit-animation: section-title2-run-center 10s infinite linear;
+        animation: section-title2-run-center 10s infinite linear;
+    }
+
+    @-webkit-keyframes section-title2-run {
+        0% {
+            left: 0;
+        }
+
+        50% {
+            left: 145px;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+    @-webkit-keyframes section-title2-run-center {
+        0% {
+            left: 50%;
+            margin-left: -350px;
+        }
+
+        50% {
+            left: 50%;
+            margin-left: 350px;
+        }
+
+        100% {
+            left: 50%;
+            margin-left: -350px;
+        }
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Libraries Stylesheet -->
+    <link href="../../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../../lib/animate/animate.min.css" rel="stylesheet">
+
+    
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+
+    
+    <!-- SweetAlert2 (Alertas) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+    <!-- JQuery -->
+    <script src="../../Usuarios/calendario/js/jquery.min.js"></script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/counterup/counterup.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        div.container-fluid.card{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Carousel Start -->
+
+
+    <!-- Navbar & Carousel Start -->
+
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="#" class="navbar-brand p-0">
+                <h1 class="m-0"></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../../index.html" class="nav-item nav-link ">Inicio</a>
+                    <a href="#" class="nav-item nav-link">Eventos y Capacitaciones</a>
+                    <a href="#" class="nav-item nav-link active">Blogs</a>
+                    <a href="#" class="nav-item nav-link">Plataformas</a>
+                    <a href="#" class="nav-item nav-link">Contáctanos</a>
+                </div>
+                <a href="#" class="btn btn-danger py-2 px-2 ms-3" onclick="inicioSesion()">Iniciar sesión</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Navbar End -->
+
+
+    <div class="container-fluid bg-danger py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">Entrada de blog</h1>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-green btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-danger p-3" placeholder="Type search keyword">
+                        <button class="btn btn-danger px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Script PHP para obtener los datos del blog -->
+    
+
+    <!-- seccion de entrada de blog -->
+    <div class="container-fluid col-xxl-10 pt-1">
+        <h1 class="text-center">MARIANA'S WEB: EL MITO DE LA PARTE MÁS OSCURA DE INTERNET (QUE 'SUPERA' INCLUSO A LA DEEP WEB)</h1>
+        <div class="container-fluid mb-3">
+            <div class="container-fluid row g-1">
+                <div class="col-xl px-8 pt-0 pb-4 text-align-center">
+                    <img src="../../img/marianasweb.jpg" class="img-fluid mx-auto d-block"/>
+                </div>
+                <div class="col-mb-8">
+                    <div class="">
+                        <p class="text font-monospace text-center">Escrito por sadmprueba@gmail.com</p>
+                        <p class="text">Mariana's Web obtiene su nombre de la parte más profunda del océano, la fosa de las Marianas ubicada en el en el océano Pacífico occidental. La parte más oscura y abismal del internet es la Dark Web, donde solo unos cuantos pueden acceder en busca de privacidad o de un sitio para obtener lo que a simple vista no se puede. ¿Pero acaso existe algo que la supere? Algunos hablan de la Mariana's Web, una parte de internet mucho más profunda y oscura que la propia Dark Web. Para algunos se trata de un mito, mientras que otros aseguran que es real. Descubramos qué hay de cierto o falso en la existencia de la Mariana's Web: cómo opera, cómo se accede a ella y otros secretos. ¿Qué es la Mariana's Web y de dónde procede su nombre? Quienes se han dedicado a alimentar el mito de la Mariana's Web afirman que en ella se pueden localizar cosas como los secretos más oscuros de la historia de la humanidad, la ubicación secreta de la Atlántida, los archivos secretos del Vaticano, o una base de datos de archivos pertenecientes a las agencias de inteligencia más poderosas de la Tierra. Mariana's Web obtiene su nombre de la parte más profunda del océano, la fosa de las Marianas ubicada en el océano Pacífico occidental. Se supone que es la parte más profunda de la web, un lugar prohibido lleno de secretos a los que solo unos cuantos pueden tener acceso mediante las herramientas adecuadas.</p>
+                        <p class="text"><small class="text-muted">Creado 2022-06-27 14:54:44</small></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- termina seccion de entrada de blog -->
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function inicioSesion() {
+            Swal.fire({
+                title: '<strong>  <span style="font-size: 40px; margin: 5px 0;">Inicia sesión como...</span> </strong>',
+                icon: false,
+                html:
+
+                    '<input type="button" class="reg-bot" onclick=location.href="" value="Alumno">' +
+                    '<input type="button" class="reg-bot" onclick=location.href="" value="Invitado">',
+
+                showCloseButton: false,
+                showCancelButton: false,
+
+                showConfirmButton: false
+            });
+        }
+    </script>
+
+    <!-- Vendor End -->
+
+
+    <!-- Footer Start -->
+
+ <div class="container-fluid bg-dark mt-5 wow fadeInUp" data-wow-delay="0.1s">
+<footer data-v-58f74857="" data-v-034d2457="" class="panel-footer bg-dark">
+        <div data-v-58f74857="" class="container">
+            <div data-v-58f74857="" class="row">
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-2">
+                    <br>
+                    
+                </div>
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-3">
+                    <br>
+                </div>
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-4">
+                    <br>
+                    <h5 class="text-light col-mb-2">Ubicación</h5>
+                    <i class="bi bi-geo-alt text-light me-2"></i>
+                    <br>
+                    <p class="mb-0 ">Hidalgo, México</p>
+                    <br>
+                </div>
+
+                <div data-v-58f74857="" class="col-sm-6 col-lg-3">
+                    <br>
+                    <h5 class="text-light col-mb-2">Contacto</h5>
+                    <i class="fa fa-phone-alt text-light me-2"> </i>
+                    <p class="mb-0">+52</p>
+<br>
+                    <i class="fab fa-whatsapp text-light me-2"></i>
+                    <p class="mb-0"></p>
+                </div>
+            </div>
+        </div>
+        <center><br>
+            <p class="mb-0">&copy; <a class="text-white ">2022</a>
+        </center>
+        <br>
+</div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            /////// Prevent closing from click inside dropdown
+            document.querySelectorAll('.dropdown-menu').forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            })
+        });
+        // DOMContentLoaded  end
+    </script>
+
+
+</html>
